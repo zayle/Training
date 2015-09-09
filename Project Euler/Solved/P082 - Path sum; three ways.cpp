@@ -2,7 +2,7 @@
 #include <iostream>
 #include <queue>
 using namespace std;
-fstream fs("P082 - Path sum: three ways.in.txt", fstream::in);
+fstream fs("P082 - Path sum; three ways.in.txt", fstream::in);
 
 struct Coord {
 	int row;
