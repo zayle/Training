@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <cmath>
 #include <fstream>
 #include <iostream>
@@ -10,7 +11,7 @@ vector<int> primes;
 vector<int> numbers;
 
 void CreatePrimes() {
-	int i, j, lmt = sqrt(sqrt(mx));
+	int i, j, lmt = sqrt(mx);
 	vector<bool> composites((lmt+1), false);
 	for (i = 2; i <= lmt; i++) {
 		if (!composites[i]) {
@@ -23,18 +24,28 @@ void CreatePrimes() {
 	}
 }
 
-void Solve() {
-	int i, j, k, aux;
-	for (i = 0; i < primes.size(); i++) {
-		for (j = 0; j < primes.size(); j++) {
-			for (k = 0; k < primes.size(); k++) {
-				aux = pow(primes[i], 2) + pow(primes[j], 3) + pow(primes[k], 4);
-				if (aux < mx) {
-					numbers.push_back(aux);
+void CreateNumbers() {
+	int i, j, k, a, b, c;
+	for (i = 0; ((i < primes.size()) && ((a = pow(primes[i], 2)) < mx)); i++) {
+		for (j = 0; ((j < primes.size()) && ((b = a + pow(primes[j], 3)) < mx)); j++) {
+			for (k = 0; (k < primes.size() && ((c = b + pow(primes[k], 4)) < mx)); k++) {
+				if (c < mx) {
+					numbers.push_back(c);
 				}
 			}
 		}
 	}
+}
+
+void Solve() {
+	int i, count = 1;
+	sort(numbers.begin(), numbers.end());
+	for (i = 1; i < numbers.size(); i++) {
+		if (numbers[i] != numbers[i-1]) {
+			count++;
+		}
+	}
+	cout << count << '\n';
 }
 
 int main() {
@@ -43,6 +54,7 @@ int main() {
 	int i, j;
 	// ========== //
 	CreatePrimes();
+	CreateNumbers();
 	Solve();
 	return 0;
 }
