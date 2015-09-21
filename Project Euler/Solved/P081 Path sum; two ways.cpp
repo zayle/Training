@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
-fstream fs("P081 - Path sum; two ways.in.txt", fstream::in);
+fstream fs("P081 Path sum; two ways.in.txt", fstream::in);
 
 const int mx = 80;
 int numbers[mx][mx];

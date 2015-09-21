@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
-fstream fs("P042 - Coded triangle numbers.in.txt", fstream::in);
+fstream fs("P042 Coded triangle numbers.in.txt", fstream::in);
 
 bool isTriangle(int a) {
 	int sr = sqrt(2 * a);
@@ -12,7 +12,7 @@ bool isTriangle(int a) {
 void Solve() {
 	int i, aux, count = 0;
 	string name;
-	while (fs >> name) {	
+	while (fs >> name) {
 		aux = 0;
 		for (i = 0; i < name.size(); i++) {
 			aux += (int(name[i]) - 64);
