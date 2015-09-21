@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
-fstream fs("P018 - Maximum path sum I.in.txt", fstream::in);
+fstream fs("P018 Maximum path sum I.in.txt", fstream::in);
 
 const int mx = 15;
 int triangle[mx + 1][mx];

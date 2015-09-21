@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-fstream fs("P022 - Names scores.in.txt", fstream::in);
+fstream fs("P022 Names scores.in.txt", fstream::in);
 
 vector<string> names;
 
