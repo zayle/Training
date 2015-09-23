@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
-fstream fs("P008 Largest product in a series.in.txt", fstream::in);
+fstream fs("008 Largest product in a series.in.txt", fstream::in);
 
 const int mx = 1000;
 const int n = 13;

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <queue>
 using namespace std;
-fstream fs("P082 Path sum; three ways.in.txt", fstream::in);
+fstream fs("083 Path sum; four ways.in.txt", fstream::in);
 
 struct Coord {
 	int row;
@@ -40,22 +40,20 @@ void AddCoord(int row, int col, int delta) {
 }
 
 void Solve() {
-	int i;
 	Coord c;
-	for (i = 0; i < mx; i++) {
-		c.row = i;
-		c.col = 0;
-		c.sum = numbers[i][0];
-		pq.push(c);
-	}
+	c.row = 0;
+	c.col = 0;
+	c.sum = numbers[0][0];
+	pq.push(c);
 	while (!pq.empty()) {
 		c = pq.top();
-		if (c.col == (mx - 1)) {
+		if ((c.row == (mx - 1)) && (c.col == (mx - 1))) {
 			cout << c.sum << '\n';
 			return;
 		}
 		if (numbers[c.row][c.col] > -1) {
 			numbers[c.row][c.col] = -1;
+			AddCoord(c.row, (c.col - 1), c.sum);
 			AddCoord(c.row, (c.col + 1), c.sum);
 			AddCoord((c.row - 1), c.col, c.sum);
 			AddCoord((c.row + 1), c.col, c.sum);

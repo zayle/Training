@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-fstream fs("P013 Large sum.in.txt", fstream::in);
+fstream fs("013 Large sum.in.txt", fstream::in);
 
 const int n = 100;
 const int mx = 50;

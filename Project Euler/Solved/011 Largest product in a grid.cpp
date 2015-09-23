@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
-fstream fs("P011 Largest product in a grid.in.txt", fstream::in);
+fstream fs("011 Largest product in a grid.in.txt", fstream::in);
 
 const int mx = 20;
 const int n = 4;
