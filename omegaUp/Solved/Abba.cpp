@@ -13,8 +13,10 @@ void FillChanges() {
     }
 }
 
-void Change(int a, int b) {
+void Change(char a, char b) {
     int i;
+    a = changes[a];
+    b = changes[b];
     for (i = 0; i < mx; i++) {
         if (changes[i] == a) {
             changes[i] = b;
@@ -31,7 +33,7 @@ void Solve() {
     b = s.size()-1;
     while (a < b) {
         if (changes[s[a]] != changes[s[b]]) {
-            Change(changes[s[a]], changes[s[b]]);
+            Change(s[a], s[b]);
             answer++;
         }
         a++;

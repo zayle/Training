@@ -13,7 +13,6 @@ struct Node {
 struct PQ {
     int node;
     int cost;
-    bool even;
 };
 
 bool operator<(PQ a, PQ b) {
@@ -42,7 +41,7 @@ int Dijkstra(int c, int v) {
         graph[from].push_back({to, cost});
         graph[to].push_back({from, cost});
     }
-    pq.push({1, 0, true});
+    pq.push({1, 0});
     while (!pq.empty()) {
         top = pq.top();
         node = top.node;
@@ -51,7 +50,7 @@ int Dijkstra(int c, int v) {
                 to = graph[node][i].to;
                 cost = graph[node][i].cost;
                 for (j = 0; j < graph[to].size(); j++) {
-                    pq.push({graph[to][j].to, graph[to][j].cost+cost+top.cost, true});
+                    pq.push({graph[to][j].to, graph[to][j].cost+cost+top.cost});
                 }
             }
             costs[node] = top.cost;
