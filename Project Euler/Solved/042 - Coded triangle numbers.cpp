@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
-fstream fs("042 Coded triangle numbers.in.txt", fstream::in);
+fstream fs("042 - Coded triangle numbers.in.txt", fstream::in);
 
 bool isTriangle(int a) {
 	int sr = sqrt(2 * a);
