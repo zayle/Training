@@ -3,9 +3,7 @@
 using namespace std;
 fstream fs("in.txt", fstream::in);
 
-void Solve() {
-
-}
+void Solve() {}
 
 int main() {
 	cin.tie(0);
