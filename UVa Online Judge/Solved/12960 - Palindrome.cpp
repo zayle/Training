@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
-fstream fs("in.txt", fstream::in);
+// fstream fs("in.txt", fstream::in);
 
 const int mx = 2000;
 int lps[mx][mx][2];
