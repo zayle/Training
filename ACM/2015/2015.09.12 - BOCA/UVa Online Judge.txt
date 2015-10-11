@@ -1,0 +1,14 @@
+A | 12950 - Even obsession
+B | 12951 - Stock market
+C | 12952 - Tri-du
+D | 12953 - Puzzle
+E | 12954 - Spiral
+F | 12955 - Factorial
+G | 12956 - Curious guardians
+H | 12957 - Rectangle park
+I | 12958 - Ominobox
+J | 12959 - Strategy game
+K | 12960 - Palindrome
+L | 12961 - Lottery
+
+https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=13&page=show_contest&contest=351

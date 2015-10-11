@@ -1,0 +1,11 @@
+A | 3375 - Las frases de Naebbirac
+B | 3307 - Cuidado con el veneno
+C | 3374 - Contando figuras
+D | 3335 - Dr. B-Tree II
+E | 3323 - Cantidad par de divisores
+F | 3314 - Juego del viajero veloz
+G | 3269 - Miedo a la oscuridad
+H | 3327 - Cantidad de números
+I | 3324 - Lista de números naturales
+
+http://coj.uci.cu/contest/contestview.xhtml?cid=1470
