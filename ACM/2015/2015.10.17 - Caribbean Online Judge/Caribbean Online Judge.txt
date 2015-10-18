@@ -1,0 +1,12 @@
+A | 3283 - Alicia y el arreglo en llamas
+B | 3331 - Bob y los reyes solitarios
+C | 3328 - Círculos en el ángulo
+D | 3334 - Dr. B-Tree I
+E | 2959 - Explotando globos
+F | 3392 - Fábrica de juguetes de madera pintados
+G | 3332 - GCD y LCM
+H | 3330 - Hades y el número de la bruja
+I | 3326 - ICPC LEK-Team
+J | 3329 - Joutong-Viajes
+
+http://coj.uci.cu/contest/cproblems.xhtml?cid=1472
