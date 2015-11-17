@@ -1,0 +1,18 @@
+class program {
+	void solve() {
+    	while (frontIsClear) {
+        	while (nextToABeeper) {
+            	pickbeeper();
+            }
+            move();
+        }
+        while(anyBeepersInBeeperBag) {
+        	putbeeper();
+        }
+    }
+
+    program () {
+        solve();
+        turnoff();
+    }
+}
