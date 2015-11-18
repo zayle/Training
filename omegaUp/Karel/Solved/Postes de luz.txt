@@ -1,0 +1,32 @@
+class program {
+	void turn(n) {
+    	iterate (n) {
+        	turnleft();
+        }
+    }
+
+	void solve() {
+    	while (nextToABeeper) {
+        	pickbeeper();
+            if (frontIsClear) {
+            	move();
+            }
+        }
+        turn(2);
+        while (frontIsClear) {
+        	move();
+        }
+        turn(3);
+        while (anyBeepersInBeeperBag) {
+        	putbeeper();
+            if (frontIsClear) {
+            	move();
+            }
+        }
+    }
+
+    program () {
+    	solve();
+        turnoff();
+    }
+}

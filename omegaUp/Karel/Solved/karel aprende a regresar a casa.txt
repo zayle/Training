@@ -1,0 +1,12 @@
+class program {
+	void solve() {
+    	iterate (3) {
+        	move();
+        }
+    }
+
+    program () {
+    	solve();
+        turnoff();
+    }
+}

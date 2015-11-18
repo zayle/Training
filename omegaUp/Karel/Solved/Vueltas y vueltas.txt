@@ -1,0 +1,16 @@
+class program {
+	void solve() {
+    	while (nextToABeeper) {
+        	while (nextToABeeper) {
+            	pickbeeper();
+            	turnleft();
+            }
+            move();
+        }
+    }
+
+    program () {
+    	solve();
+        turnoff();
+    }
+}

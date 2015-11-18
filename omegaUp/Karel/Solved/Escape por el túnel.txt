@@ -1,0 +1,12 @@
+class program {
+    void solve() {
+    	while (leftIsBlocked || rightIsBlocked) {
+        	move();
+        }
+    }
+    
+    program () {
+    	solve();
+        turnoff();
+    }
+}

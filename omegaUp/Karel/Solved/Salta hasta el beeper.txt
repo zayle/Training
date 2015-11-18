@@ -1,0 +1,32 @@
+class program {
+	void turn(n) {
+    	iterate (n) {
+        	turnleft();
+        }
+    }
+
+	void solve() {
+    	while (notNextToABeeper) {
+        	if (frontIsClear) {
+            	move();
+            } else {
+            	turnleft();
+                while (rightIsBlocked) {
+                	move();
+                }
+                turn(3);
+                move();
+                turn(3);
+                while (frontIsClear) {
+                	move();
+                }
+                turnleft();
+            }
+        }
+    }
+
+    program () {
+    	solve();
+        turnoff();
+    }
+}
