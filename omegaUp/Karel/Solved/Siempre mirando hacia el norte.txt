@@ -1,0 +1,12 @@
+class program {
+	void solve() {
+    	while (notFacingNorth) {
+        	turnleft();
+        }
+    }
+
+    program () {
+    	solve();
+        turnoff();
+    }
+}

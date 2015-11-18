@@ -1,0 +1,14 @@
+class program {
+	void turn(n) {
+		iterate (n) {
+			turnleft();
+		}
+	}
+
+	void solve() {}
+	
+	program() {
+		solve();
+		turnoff();
+	}
+}
