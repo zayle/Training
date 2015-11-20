@@ -1,0 +1,22 @@
+class program {
+	void turn(n) {
+		iterate (n) {
+			turnleft();
+		}
+	}
+
+	void solve() {
+    	while (notFacingNorth) {
+        	turnleft();
+        }
+        putbeeper();
+        if (anyBeepersInBeeperBag) {
+        	turn(2);
+        }
+    }
+	
+	program() {
+		solve();
+		turnoff();
+	}
+}

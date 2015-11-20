@@ -1,0 +1,21 @@
+class program {
+	void turn(n) {
+		iterate (n) {
+			turnleft();
+		}
+	}
+
+	void solve() {
+    	iterate (5) {
+        	putbeeper();
+            if (frontIsClear) {
+            	move();
+            }
+        }
+    }
+	
+	program() {
+		solve();
+		turnoff();
+	}
+}

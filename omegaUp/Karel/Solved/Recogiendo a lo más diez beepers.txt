@@ -1,0 +1,20 @@
+class program {
+	void turn(n) {
+		iterate (n) {
+			turnleft();
+		}
+	}
+
+	void solve() {
+    	iterate (10) {
+        	if (nextToABeeper) {
+            	pickbeeper();
+            }
+        }
+    }
+	
+	program() {
+		solve();
+		turnoff();
+	}
+}

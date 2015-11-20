@@ -1,0 +1,24 @@
+class program {
+	void turn(n) {
+		iterate (n) {
+			turnleft();
+		}
+	}
+
+	void solve() {
+    	while (notFacingWest) {
+        	turnleft();
+        }
+        iterate (2) {
+        	while (frontIsClear) {
+            	move();
+            }
+        	turnleft();
+        }
+    }
+	
+	program() {
+		solve();
+		turnoff();
+	}
+}

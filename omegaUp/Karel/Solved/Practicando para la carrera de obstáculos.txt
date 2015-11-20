@@ -1,0 +1,27 @@
+class program {
+	void turn(n) {
+		iterate (n) {
+			turnleft();
+		}
+	}
+
+	void solve() {
+    	turnleft();
+        iterate (5) {
+        	pickbeeper();
+            if (rightIsBlocked) {
+            	move();
+            	turn(3);
+                move();
+                turn(3);
+                move();
+                turn(2);
+            }
+        }
+    }
+	
+	program() {
+		solve();
+		turnoff();
+	}
+}
