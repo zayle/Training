@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <cmath>
-#include <cstdio>
 #include <fstream>
 #include <iostream>
 #include <queue>
@@ -9,9 +8,13 @@
 typedef long double ld;
 typedef long long ll;
 using namespace std;
-fstream fs("in.txt", fstream::in);
+// fstream fs("in.txt", fstream::in);
 
-void Solve() {}
+void Solve() {
+    int a, b;
+    cin >> a >> b;
+    cout << ((2*b)-a) << '\n';
+}
 
 int main() {
 	cin.tie(0);
