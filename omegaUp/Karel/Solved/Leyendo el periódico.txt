@@ -1,0 +1,48 @@
+class program {
+	void turn(n) {
+		iterate (n) {
+			turnleft();
+		}
+	}
+    
+    void solveAux() {
+    	if (frontIsClear) {
+        	move();
+            solveAux();
+            move();
+        } else {
+        	pickbeeper();
+            turn(2);
+        }
+    }
+
+	void solve() {
+    	while (notFacingSouth) {
+        	turnleft();
+        }
+        while (frontIsClear) {
+        	move();
+        }
+        turn(2);
+        move();
+        turnleft();
+        while(frontIsClear) {
+        	move();
+        }
+        turnleft();
+        solveAux();
+        turn(3);
+        while (leftIsClear) {
+        	move();
+        }
+        move();
+        turn(3);
+        move();
+        putbeeper();
+    }
+	
+	program() {
+		solve();
+		turnoff();
+	}
+}
