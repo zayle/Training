@@ -1,34 +1,18 @@
+#include<algorithm>
 #include<bitset>
 #include<cmath>
+#include<cstdio>
+#include<iostream>
 #include<vector>
+typedef long double ld;
+typedef long long ll;
+typedef unsigned long long ull;
 using namespace std;
 
-const int MAX = 1000;
+const int MAX = 1000001;
 int fexponents[MAX];
 bitset<MAX> sieve;
 vector<int> primes;
-
-// Binary exponentiation
-// (a^b)%mod
-int BExponentiation(int a, int b, int mod) {
-    int result = 1;
-    for (; b; b >>= 1) {
-        if (b & 1) result = (result*a)%mod;
-        a = (a*a)%mod;
-    }
-    return result;
-}
-
-// Binary multiplication
-// (a*b)%mod
-int BMultiplication(int a, int b, int mod) {
-    int result = 0;
-    for (; b; b >>= 1) {
-        if (b & 1) result = (result+a)%mod;
-        a = (a+a)%mod;
-    }
-    return result;
-}
 
 int CreatePrimes() {
     int i, j, sroot;
@@ -62,8 +46,8 @@ void FExponents(int n) {
     }
 }
 
-int NCK(int n, int k) {
-    int i, result;
+ull NCK(int n, int k) {
+    ull i, result;
     FExponents(n-k);
     FExponents(k);
     for (i = 1; i <= n; i++) fexponents[i] *= -1;
@@ -78,6 +62,21 @@ int NCK(int n, int k) {
     return result;
 }
 
+void solve() {
+    int i, k, n, t;
+    CreatePrimes();
+    ExtractPrimes();
+    cin >> t;
+    for (i = 0; i < t; i++) {
+        cin >> n >> k;
+        cout << NCK((n-1), (k-1)) << '\n';
+    }
+}
+
 int main() {
+    cin.tie(0);
+    ios_base::sync_with_stdio(false);
+    // ========== //
+    solve();
     return 0;
 }
