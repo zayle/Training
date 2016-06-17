@@ -1,8 +1,10 @@
 #include<bitset>
+#include<cmath>
 #include<vector>
 using namespace std;
 
 const int MAX = 1000;
+int fexponents[MAX];
 bitset<MAX> sieve;
 vector<int> primes;
 
@@ -37,6 +39,25 @@ int CreatePrimes() {
     for (i = 2; i <= sroot; i += 1) {
         if (sieve[i]) {
             for (j = (i*i); j < MAX; j += i) sieve[j] = false;
+        }
+    }
+}
+
+void ExtractPrimes() {
+    int i;
+    for (i = 0; i < MAX; i++) {
+        if (sieve[i]) primes.push_back(i);
+    }
+}
+
+void FExponents(int n) {
+    int i, j;
+    for (i = 0; i < primes.size(); i++) {
+        if (n < primes[i]) return;
+        j = primes[i];
+        while (j <= n) {
+            fexponents[primes[i]] += (n/j);
+            j *= primes[i];
         }
     }
 }
