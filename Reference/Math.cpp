@@ -30,7 +30,7 @@ int BMultiplication(int a, int b, int mod) {
     return result;
 }
 
-int CreatePrimes() {
+void CreatePrimes() {
     int i, j, sroot;
     sieve.set();
     sieve[0] = false;
