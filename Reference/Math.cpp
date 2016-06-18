@@ -62,6 +62,16 @@ void FExponents(int n) {
     }
 }
 
+// Greatest common divisor
+int GCD(int a, int b) {
+    if (a < b) swap(a, b);
+    while (b) {
+        a %= b;
+        swap(a, b);
+    }
+    return a;
+}
+
 int NCK(int n, int k) {
     int i, result;
     FExponents(n-k);
