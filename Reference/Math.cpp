@@ -3,9 +3,9 @@
 #include<vector>
 using namespace std;
 
-const int MAX = 1000;
-int fexponents[MAX];
-bitset<MAX> sieve;
+const int MAXP = 1000;
+int fexponents[MAXP];
+bitset<MAXP> sieve;
 vector<int> primes;
 
 // Binary exponentiation
@@ -35,17 +35,17 @@ void CreatePrimes() {
     sieve.set();
     sieve[0] = false;
     sieve[1] = false;
-    sroot = sqrt(MAX-1);
+    sroot = sqrt(MAXP-1);
     for (i = 2; i <= sroot; i += 1) {
         if (sieve[i]) {
-            for (j = (i*i); j < MAX; j += i) sieve[j] = false;
+            for (j = (i*i); j < MAXP; j += i) sieve[j] = false;
         }
     }
 }
 
 void ExtractPrimes() {
     int i;
-    for (i = 0; i < MAX; i++) {
+    for (i = 0; i < MAXP; i++) {
         if (sieve[i]) primes.push_back(i);
     }
 }
