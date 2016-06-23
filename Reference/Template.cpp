@@ -9,12 +9,15 @@ typedef long long ll;
 typedef unsigned long long ull;
 using namespace std;
 
-void solve() {}
+const int MAX = 0;
+const int MOD = 1000000007;
+
+void Solve() {}
 
 int main() {
     cin.tie(0);
     ios_base::sync_with_stdio(false);
     // ========== //
-    solve();
+    Solve();
     return 0;
 }
