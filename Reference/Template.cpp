@@ -3,6 +3,7 @@
 #include<cmath>
 #include<cstdio>
 #include<iostream>
+#include<queue>
 #include<vector>
 typedef long double ld;
 typedef long long ll;
