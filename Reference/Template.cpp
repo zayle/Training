@@ -4,6 +4,8 @@
 #include<cstdio>
 #include<iostream>
 #include<queue>
+#include<stack>
+#include<utility>
 #include<vector>
 typedef long double ld;
 typedef long long ll;
